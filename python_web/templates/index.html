@@ -1,40 +1,16 @@
 <!doctype html>
-<html lang="fr">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Luanti Telemetry - Web</title>
-  <link rel="stylesheet" href="/static/styles.css">
-</head>
-<body>
-  <header>
-    <h1>Luanti Telemetry — Interface Web</h1>
-    <div id="status">Connexion…</div>
-  </header>
-
-  <main>
-    <section class="panel">
-      <h2>Joueurs</h2>
-      <div class="table-wrap">
-        <table id="players">
-          <thead>
-            <tr><th>Joueur</th><th>X</th><th>Y</th><th>Z</th><th>Âge (s)</th></tr>
-          </thead>
-          <tbody></tbody>
-        </table>
-      </div>
-    </section>
-
-    <section class="panel">
-      <h2>Carte (X/Z)</h2>
-      <canvas id="map" width="800" height="420"></canvas>
-    </section>
-  </main>
-
-  <footer>
-    <small>Écoute sur <code>http://127.0.0.1:8080/collect</code> — Actualisation en temps réel via SSE</small>
-  </footer>
-
-  <script src="/static/app.js"></script>
-</body>
-</html>
+<html lang="fr"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Luanti Telemetry - Web (Boussole + Grille)</title>
+<link rel="stylesheet" href="/static/styles.css">
+</head><body>
+<header><h1>Luanti Telemetry — Web</h1><div id="status">Connexion…</div></header>
+<main>
+<section class="panel"><h2>Joueurs</h2><div class="table-wrap">
+<table id="players"><thead><tr><th>Joueur</th><th>X</th><th>Y</th><th>Z</th><th>Âge (s)</th></tr></thead><tbody></tbody></table>
+</div></section>
+<section class="panel"><h2>Carte (X/Z) + Boussole</h2><canvas id="map" width="1000" height="500"></canvas></section>
+</main>
+<footer><small>Flux en temps réel via SSE — POST vers <code>/collect</code></small></footer>
+<script src="/static/app.js"></script>
+</body></html>
